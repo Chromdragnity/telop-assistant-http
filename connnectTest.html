@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<title>RTA飲酒ランタイマー</title>
+</head>
+<body>
+    <h1>お試し</h1>
+    <div id="container1">
+        <h2>データセット取得</h2>
+        <div id="get_datasetID">
+            <label for="get_dataset_label">番号（No.）</label>
+            <input id="get_dataset_text" type="number">
+            <input id="get_dataset_button" type="button" value="データセットの取得">
+        </div>
+        <h2>OBSに直接設定</h2>
+        <div id="set_directID">
+            <div>
+                <label for="set_direct_source_name_label">ソース名</label>
+                <input id="set_direct_source_name" type="text">
+            </div>
+            <div>
+                <label for="set_direct_text_label" value="ソースに設定するデータ"></label>
+                <input id="set_direct_text" type="text">
+            </div>
+            <input id="set_direct_button" type="button" value="データセットの設定">
+        </div>
+        <h2>Twitch連携</h2>
+        <div id="twitch-test">
+            <input id="get-twitch" type="button" value="Twitchの取得">
+        </div>
+    </div>
+
+</body>
+<script>
+    var script = document.createElement('script');
+    script.src = (window.location.href).replace("connnectTest.html","") + "test.js";
+    console.log(script)
+    // document.getElementById('get-twitch').addEventListener('click',
+    //     async ()=>{
+    //         const certificationURL="https://id.twitch.tv/oauth2/token"
+    //         const client_id="t9bhnqe51rhqcmxyhwqbxge60hc8vo"
+    //         const client_secret="ppx0g7se0ezrzkk7sdbw09yqbrzown"
+    //         const scope="user:read:email"
+    //         let query = certificationURL + `?client_id=` + new URLSearchParams(client_id);
+    //         query += `&client_secret=` + new URLSearchParams(client_secret);
+    //         query += `&grant_type=client_credentials`;
+    //         query += `&scope=` + new URLSearchParams(scope);
+    //         requestData = null
+
+    //         // query="https://id.twitch.tv/oauth2/authorize?client_id=t9bhnqe51rhqcmxyhwqbxge60hc8vo&redirect_uri=http://localhost&response_type=token&scope=user:read:email"
+    //         query="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=t9bhnqe51rhqcmxyhwqbxge60hc8vo&redirect_uri=http://localhost:8080&scope=channel%3Amanage%3Apolls+channel%3Aread%3Apolls"
+    //         const response = await fetch(query,requestData);
+    //         console.log(response)
+    //     }
+    // )
+</script>
+<!-- <script src='test.js'></script> -->
+</html>

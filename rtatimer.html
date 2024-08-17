@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<title>RTAタイマー</title>
+</head>
+<body>
+    <h1>RTA飲酒ラン専用クライアント</h1>
+    <div id="next-game-container">
+        <div id="next-game">
+            <h3>ゲームリスト</h3>
+            <input id="next-game-get-list"  type="button" value="ゲームリスト取得">
+            <div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="timer-container">
+        <h3>
+        <div id="all-time-container">
+            <h4>全体タイマー</h4>
+            <div id="all-time">00:00:00</div>
+            <div id="all-time-buttons">
+                <input id="all-start"  type="button" value="全タイマー開始">
+                <input id="all-stop"   type="button" value="全タイマー停止">
+                <input id="all-reset"  type="button" value="リセット">
+            </div>
+        </div>
+
+        <div id="one-time-container">
+            <h4>走者1</h4>
+            <div id="one-time">00:00:00</div>
+            <div id="one-time-buttons">
+                <input id="one-restart"type="button" value="タイマー再開">
+                <input id="one-stop"   type="button" value="タイマー停止">
+            </div>
+        </div>
+
+        <div id="two-time-container">
+            <h4>走者2</h4>
+            <div id="two-time">00:00:00</div>
+            <div id="two-time-buttons">
+                <input id="two-time-restart"type="button" value="タイマー再開">
+                <input id="two-time-stop"   type="button" value="タイマー停止">
+            </div>
+        </div>
+
+        <div id="three-time-container">
+            <h4>走者3</h4>
+            <div id="three-time">00:00:00</div>
+            <div id="three-time-buttons">
+                <input id="three-time-restart"type="button" value="タイマー再開">
+                <input id="three-time-stop"   type="button" value="タイマー停止">
+            </div>
+        </div>
+    </div>
+    <h1>管理設定（OBS）</h1>
+    <div>
+        <div id="all-time-management-container">
+            <h4>全体タイマー</h4>
+            <div>
+                <label for="all-time-obs-source-label">OBSソース名</label>
+                <input id="all-time-obs-source" type="text" value="全体タイマー"></div>
+            </div>
+        </div>
+        <div id="one-time-management-container">
+            <h4>走者1タイマー</h4>
+            <div>
+                <label for="one-time-obs-source-label">OBSソース名</label>
+                <input id="one-time-obs-source" type="text" value="走者1タイマー"></div>
+            </div>
+        </div>
+        <div id="two-time-management-container">
+            <h4>走者2タイマー</h4>
+            <div>
+                <label for="two-time-obs-source-label">OBSソース名</label>
+                <input id="two-time-obs-source" type="text" value="走者2タイマー"></div>
+            </div>
+        </div>
+        <div id="three-time-management-container">
+            <h4>走者3タイマー</h4>
+            <div>
+                <label for="three-time-obs-source-label">OBSソース名</label>
+                <input id="three-time-obs-source" type="text" value="走者3タイマー"></div>
+            </div>
+        </div>
+        <div id="output-log-management-container">
+            <h4>その他</h4>
+            <div>
+                <label for="output-log-label">ログ出力設定</label>
+                <input id="output-log-text" type="text" value="false"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='timerData.js'></script>
+<script src='styleConfig.js'></script>
+<script src='connectApi.js'></script>
+<script src='nextDisp.js'></script>
+<script src='allTimer.js'></script>
+<script src='timer1.js'></script>
+<script src='timer2.js'></script>
+<script src='timer3.js'></script>
+</html>
